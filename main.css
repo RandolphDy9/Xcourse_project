@@ -31,6 +31,7 @@ nav {
 
 .nav-item:hover {
     background-color: #070f69;
+    transform: translateX(10px);
 }
 
 .nav-item:last-child {
@@ -42,15 +43,15 @@ nav {
     margin-bottom: 25px;
 }
 
-.white-text {
+.li-style {
     text-decoration: none;
     color: rgb(245, 241, 242);
 }
 
-.white-text:hover,
-.highlight {
+.li-style:hover,
+.highlight,
+table tr:hover {
     color: #fd0236;
-    font-size: 1.3em;
 }
 
 body {
@@ -86,10 +87,16 @@ header {
     color: rgb(245, 241, 242);
 }
 
-.tutor img {
+.tutor-pic {
     width: 200px;
     height: 200px;
     float: left;
+    transform: rotate(0);
+    transition: transition 1s linear;
+}
+
+.tutor-pic:hover {
+    transform: rotate(10deg);
 }
 
 .main-heading {
@@ -114,6 +121,7 @@ header {
     height: 200px;
     display: block;
     margin: 0 auto;
+    transform: scale(1.6);
 }
 
 .box {
