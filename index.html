@@ -3,12 +3,13 @@
     <head>
         <meta charset="uft-8">
         <title>X-Course | courses</title>
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="main.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
 
-    <nav>
+    <nav class="navbar">
         <img class="nav-pic" src="img/cancel.png" alt="Navigation Picture"/>
         <ul>
             <li class="nav-item"><a class="li-style" href="#tutors"><strong>Tutors</strong></a></li>
@@ -16,20 +17,6 @@
             <li class="nav-item"><a class="li-style" href="#courses"><strong>Courses</strong></a></li>
             <li class="nav-item"><a class="li-style" href="#schedule"><strong>Schedule</strong></a></li>
         </ul>
-        
-        <div class="container">
-            <h3 class="highlight">Creator</h3>
-            <p class="small-font">This site is created by <em>Johhny J. King</em>. A 
-                graduate of Computer Science from the University of
-                Canada, U.S.A</p>
-        </div>
-
-        <div class="container">
-            <h3 class="highlight">About</h3>
-            <p class="small-font">This site is about providing people a fun and 
-                creative way of taking web courses.
-            </p>
-        </div>
 
     </nav>
 
@@ -44,32 +31,32 @@
         </header>
 
         <div class="container">
-            <h1 id="tutors" class="main-heading">The Tutors</h1>
+            <h1 id="tutors" class="main-heading highlight">The Tutors</h1>
             <section class="tutor">
                 <img class="tutor-pic" src="img/businessman.png" alt="Picture of Juan">
                 <h2 class="highlight">Billy Jay Gates</h2>
                 <p>is an American business magnate, investor, 
                     author, philanthropist, humanitarian, and principal 
                     founder of Microsoft Corporation</p>
-            </section>
+            </section><!--
 
-            <section class="tutor">
+            --><section class="tutor">
                 <img class="tutor-pic" src="img/cool.png" alt="Picture of Jose">
                 <h2 class="highlight">Mark Zucker-Burger</h2>
                 <p>is an American technology entrepreneur and philanthropist 
                     best known for co-founding and leading Facebook as its 
-                    chairman and chief executive officer</p>
-            </section>
+                    chairman.</p>
+            </section><!--
 
-            <section class="tutor">
+            --><section class="tutor">
                 <img class="tutor-pic" src="img/nerd.png" alt="Picture of Juan">
                 <h2 class="highlight">Rex Karlo Cabana</h2>
                 <p>is an American business magnate, investor, 
                     author, philanthropist, humanitarian, and principal 
                     founder of Microsoft Corporation</p>
-            </section>
+            </section><!--
 
-            <section class="tutor">
+            --><section class="tutor">
                 <img class="tutor-pic" src="img/professor.png" alt="Picture of Jose">
                 <h2 class="highlight">Jerry Jones</h2>
                 <p>is an American technology entrepreneur and philanthropist 
@@ -80,7 +67,8 @@
         </div>
 
         <div class="container">
-            <h1 id="gootToKnow" class="main-heading">Good to Know</h1>
+            <h1 id="goodToKnow" class="main-heading highlight">Good to Know</h1>
+            
             <section class="display-3-col">
                 <h2 class="highlight center-content">Support</h2>
                 <p>Join hundreds of thousands of students in 
@@ -91,11 +79,20 @@
 
             --><section class="display-3-col">
                 <h2 class="highlight center-content">People's choice</h2>
-                <ol>
-                    <li>Angular</li>
-                    <li>JavaScript</li>
-                    <li>HTML</li>
-                </ol>
+                <section>
+                    <img class="medal-pic" src="img/gold-medal.png" alt="gold-medal">
+                    <h5>HTML</h5>
+                </section><!--
+
+                --><section>
+                    <img class="medal-pic" src="img/silver-medal.png" alt="gold-medal">
+                    <h5>CSS</h5>
+                </section><!--
+
+                --><section>
+                    <img class="medal-pic" src="img/bronze-medal.png" alt="gold-medal">
+                    <h5>JavaScript</h5>
+                </section>
             </section><!--
 
             --><section class="display-3-col">
@@ -106,73 +103,71 @@
         </div>
 
         <div class="container">
-            <h1 id="courses" class="main-heading">Courses</h1>
-            <div>
-                <section class="box display-3-col">
-                    <h2 class="highlight">HTML</h2>
-                    <p>Although this Homepage component 
-                        is still very simple, it's already 
-                        starting to have a significant size. 
-                        For example, we have implemented a table 
-                        containing a list of lessons.</p>
-                </section><!-- 
-        
-                --><section class="box display-3-col">
-                    <h2 class="highlight">CSS</h2>
-                    <p>Although this Homepage component 
-                            is still very simple, it's already 
-                            starting to have a significant size. 
-                            For example, we have implemented a table 
-                            containing a list of lessons.</p>
-                </section><!--
-        
-                --><section class="box display-3-col">
-                    <h2 class="highlight">JavaScript</h2>
-                    <p>Although this Homepage component 
-                            is still very simple, it's already 
-                            starting to have a significant size. 
-                            For example, we have implemented a table 
-                            containing a list of lessons.</p>
-                </section><!--
-    
-                --><section class="box display-3-col">
-                    <h2 class="highlight">JQuery</h2>
-                    <p>Although this Homepage component 
-                            is still very simple, it's already 
-                            starting to have a significant size. 
-                            For example, we have implemented a table 
-                            containing a list of lessons.</p>
-                </section><!--
-    
-                --><section class="box display-3-col">
-                    <h2 class="highlight">AJAX</h2>
-                    <p>Although this Homepage component 
-                            is still very simple, it's already 
-                            starting to have a significant size. 
-                            For example, we have implemented a table 
-                            containing a list of lessons.</p>
-                </section><!--
-    
-                --><section class="box display-3-col">
-                    <h2 class="highlight">SASS</h2>
-                    <p>Although this Homepage component 
-                            is still very simple, it's already 
-                            starting to have a significant size. 
-                            For example, we have implemented a table 
-                            containing a list of lessons.</p>
-                </section>
-                <div class="clear"></div>
+            <h1 id="courses" class="main-heading highlight">Courses</h1>
+            <div class="container hasRow row">
+
+                <div class="card col">
+                    <img class="card-img-top" src="img/ai.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title highlight">AI</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <img class="card-img-top" src="img/css.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title highlight">CSS</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+
+                <div class="card col">
+                    <img class="card-img-top" src="img/doc.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title highlight">Doc</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container hasRow row">
+
+                <div class="col">
+                    <img class="card-img-top" src="img/html.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title highlight">HTML</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+
+                <div class="card col">
+                    <img class="card-img-top" src="img/javascript.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title highlight">JavaScript</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <img class="card-img-top" src="img/json-file.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title highlight">JSON</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
             </div>
         </div>
         
         <div class="container">
-            <h1 id="schedule" class="main-heading">Schedule</h1>
-            <table>
+            <h1 id="schedule" class="main-heading highlight">Schedule</h1>
+            <table class="table table-hover">
                 <thead>
-                    <tr>
-                        <th class="highlight">Place</th>
-                        <th class="highlight">Date</th>
-                        <th class="highlight">Time</th>
+                    <tr class="table-danger">
+                        <th scope="col" class="highlight">Place</th>
+                        <th scope="col" class="highlight">Date</th>
+                        <th scope="col" class="highlight">Time</th>
                     </tr>
                 </thead>
 
@@ -209,6 +204,33 @@
                     </tr>
                 </tbody>
             </table>
-        </div>   
+        </div> 
+
+        <div class="container main-heading">
+            <div class="hasRow row">
+                <div class="col border">
+                    <h3 class="highlight">Creator</h3>
+                    <p>This site is created by <em>Johhny J. King</em>. A 
+                        graduate of Computer Science from the University of
+                        Canada, U.S.A</p>
+                </div>
+        
+                <div class="col border">
+                    <h3 class="highlight">About</h3>
+                    <p>This site is about providing people a fun and 
+                        creative way of taking web courses.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p class="highlight contain text-center">&copy; 2018 Randolph Dy</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+        <script src="main.js"></script>
+
     </body>  
 </html>
