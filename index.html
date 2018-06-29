@@ -12,10 +12,10 @@
     <nav class="navbar">
         <img class="nav-pic" src="img/cancel.png" alt="Navigation Picture"/>
         <ul>
-            <li class="nav-item"><a class="li-style" href="#tutors"><strong>Tutors</strong></a></li>
-            <li class="nav-item"><a class="li-style" href="#goodToKnow"><strong>Info</strong></a></li>
-            <li class="nav-item"><a class="li-style" href="#courses"><strong>Courses</strong></a></li>
-            <li class="nav-item"><a class="li-style" href="#schedule"><strong>Schedule</strong></a></li>
+            <li class="nav-item"><a class="li-style nav-link" href="#tutors"><strong>Tutors</strong></a></li>
+            <li class="nav-item"><a class="li-style nav-link" href="#goodToKnow"><strong>Info</strong></a></li>
+            <li class="nav-item"><a class="li-style nav-link" href="#courses"><strong>Courses</strong></a></li>
+            <li class="nav-item"><a class="li-style nav-link" href="#schedule"><strong>Schedule</strong></a></li>
         </ul>
     </nav>
 
@@ -30,100 +30,150 @@
 
         <div class="container">
             <h1 id="tutors" class="main-heading highlight">The Tutors</h1>
-            <section class="tutor">
-                <img class="tutor-pic" src="img/businessman.png" alt="Picture of Juan">
-                <h2 class="highlight back-style">Billy Jay Gates</h2>
-                <p>is an American business magnate, investor, 
-                    author, philanthropist, humanitarian, and principal 
-                    founder of Microsoft Corporation</p>
-            </section><!--
 
-            --><section class="tutor">
-                <img class="tutor-pic" src="img/cool.png" alt="Picture of Jose">
-                <h2 class="highlight back-style">Mark Zucker-Burger</h2>
-                <p>is an American technology entrepreneur and philanthropist 
-                    best known for co-founding and leading Facebook as its 
-                    chairman.</p>
-            </section><!--
-
-            --><section class="tutor">
-                <img class="tutor-pic" src="img/nerd.png" alt="Picture of Juan">
-                <h2 class="highlight back-style">Rex Karlo Cabana</h2>
-                <p>is an American business magnate, investor, 
-                    author, philanthropist, humanitarian, and principal 
-                    founder of Microsoft Corporation</p>
-            </section><!--
-
-            --><section class="tutor">
-                <img class="tutor-pic" src="img/professor.png" alt="Picture of Jose">
-                <h2 class="highlight back-style">Jerry Jones</h2>
-                <p>is an American technology entrepreneur and philanthropist 
-                    best known for co-founding and leading Facebook as its 
-                    chairman and chief executive officer</p>
-            </section>
+            <div class="row">
+                <section class="tutor col-md-6">
+                    <img class="tutor-pic" src="img/businessman.png" alt="Picture of Juan">
+                    <h2 class="highlight back-style">Billy Jay Gates</h2>
+                    <button type="button" class="btn btn-danger enrollBtn" data-toggle="modal" data-target="#alertTutor" value="btn1">Enroll!</button>
+                    <p>is an American business magnate, investor, 
+                        author, philanthropist, humanitarian, and principal 
+                        founder of Microsoft Corporation</p>
+                    
+                </section><!--
+    
+                --><section class="tutor col-md-6">
+                    <img class="tutor-pic" src="img/cool.png" alt="Picture of Jose">
+                    <h2 class="highlight back-style">Mark Zucker-Burger</h2>
+                    <button type="button" class="btn btn-danger enrollBtn" data-toggle="modal" data-target="#alertTutor" value="btn2">Enroll!</button>
+                    <p>is an American technology entrepreneur and philanthropist 
+                        best known for co-founding and leading Facebook as its 
+                        chairman.</p>
+                    
+                </section>
+            </div>
+            
+            <div class="row">
+                <section class="tutor col-md-6">
+                    <img class="tutor-pic" src="img/nerd.png" alt="Picture of Juan">
+                    <h2 class="highlight back-style">Rex Karlo Cabana</h2>
+                    <button type="button" class="btn btn-danger enrollBtn" data-toggle="modal" data-target="#alertTutor" value="btn3">Enroll!</button>
+                    <p>is an American business magnate, investor, 
+                        author, philanthropist, humanitarian, and principal 
+                        founder of Microsoft Corporation</p>
+                    
+                </section><!--
+    
+                --><section class="tutor col-md-6">
+                    <img class="tutor-pic" src="img/professor.png" alt="Picture of Jose">
+                    <h2 class="highlight back-style">Jerry Jones</h2>
+                    <button type="button" class="btn btn-danger enrollBtn" data-toggle="modal" data-target="#alertTutor" value="btn4">Enroll!</button>
+                    <p>is an American technology entrepreneur and philanthropist 
+                        best known for co-founding and leading Facebook as its 
+                        chairman.</p>
+                    
+                </section>
+            </div>
+            
             <div class="clear"></div>
+
+            <!-- Alert Modal -->
+            <div class="modal fade" id="alertTutor" tabindex="-1" role="alertdialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="alertdialog">
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        <div class="alertPara"></div>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="courseModal" tabindex="-1" role="dialog" aria-labelledby="courseModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">More Info: </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body courseModalLabel"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="container back-style">
             <h1 id="goodToKnow" class="main-heading highlight">Good to Know</h1>
             
-            <section class="display-3-col">
-                <h2 class="highlight center-content">Support</h2>
-                <p>Join hundreds of thousands of students in 
-                    our supportive online community. They're 
-                    always available to lend support and 
-                    nudge you need to keep going.</p>
-            </section><!--
-
-            --><section class="display-3-col">
-                <h2 class="highlight center-content">People's choice</h2>
-                <section>
-                    <img class="medal-pic" src="img/gold-medal.png" alt="gold-medal">
-                    <h5>HTML</h5>
-            </section><!--
-
-            --><section>
-                    <img class="medal-pic" src="img/silver-medal.png" alt="gold-medal">
-                    <h5>CSS</h5>
-            </section><!--
-
-            --><section>
-                    <img class="medal-pic" src="img/bronze-medal.png" alt="gold-medal">
-                    <h5>JavaScript</h5>
+            <div class="row">
+                <section class="col-md-4">
+                    <h2 class="highlight">Support</h2>
+                    <p>Join hundreds of thousands of students in 
+                        our supportive online community. They're 
+                        always available to lend support and 
+                        nudge you need to keep going.</p>
+                </section><!--
+                
+    
+                --><section class="col-md-4">
+                    <h2 class="highlight">People's choice</h2>
+                    <ul class="list-group border">
+                        <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-secondary">
+                            <img class="medal-pic img-fluid" src="img/gold-medal.png" alt="gold-medal">
+                            HTML
+                            <span class="badge badge-primary badge-pill">45%</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-secondary">
+                            <img class="medal-pic img-fluid" src="img/silver-medal.png" alt="gold-medal">
+                            CSS
+                            <span class="badge badge-primary badge-pill">35%</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-secondary">
+                            <img class="medal-pic img-fluid" src="img/bronze-medal.png" alt="gold-medal">
+                            JavaScript
+                            <span class="badge badge-primary badge-pill">20%</span>
+                        </li>
+                    </ul>
+                    <br/>
+                </section><!--
+    
+                --><section class="col-md-4">
+                    <img class="students-pic" src="img/students.png" alt="Picture of students">
                 </section>
-            </section><!--
-
-            --><section class="display-3-col">
-                <img class="students-pic" src="img/students.png" alt="Picture of students">
-            </section>
-            <div class="clear"></div>
-
+                <div class="clear"></div>
+            </div>
         </div>
 
         <div class="container">
             <h1 id="courses" class="main-heading highlight">Courses</h1>
             <div class="container row mx-auto">
 
-                <div class="card col-md">
-                    <img class="card-img-top" src="img/ai.png" alt="Card image cap">
+                <div class="col-md">
+                    <img class="card-img-top img-fluid" src="img/ai.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title highlight">AI</h5>
+                        <h4 class="card-title"><a class="highlight" data-toggle="modal" data-target="#courseModal" href="#">AI</a></h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
                 </div>
 
                 <div class="col-md back-style">
-                    <img class="card-img-top" src="img/css.png" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="img/css.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title highlight">CSS</h5>
+                        <h4 class="card-title"><a class="highlight" data-toggle="modal" data-target="#courseModal" href="#">CSS</a></h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
                 </div>
 
-                <div class="card col-md">
-                    <img class="card-img-top" src="img/doc.png" alt="Card image cap">
+                <div class="col-md">
+                    <img class="card-img-top img-fluid" src="img/doc.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title highlight">Doc</h5>
+                        <h4 class="card-title"><a class="highlight" data-toggle="modal" data-target="#courseModal" href="#">Doc</a></h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
                 </div>
@@ -133,25 +183,25 @@
             <div class="container row mx-auto">
 
                 <div class="col-md back-style">
-                    <img class="card-img-top" src="img/html.png" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="img/html.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title highlight">HTML</h5>
+                        <h4 class="card-title"><a class="highlight" data-toggle="modal" data-target="#courseModal" href="#">HTML</a></h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
                 </div>
 
-                <div class="card col-md">
-                    <img class="card-img-top" src="img/javascript.png" alt="Card image cap">
+                <div class="col-md">
+                    <img class="card-img-top img-fluid" src="img/javascript.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title highlight">JavaScript</h5>
+                        <h4 class="card-title"><a class="highlight" data-toggle="modal" data-target="#courseModal" href="#">JavaScript</a></h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
                 </div>
 
                 <div class="col-md back-style">
-                    <img class="card-img-top" src="img/json-file.png" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="img/json-file.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title highlight">JSON</h5>
+                        <h4 class="card-title"><a class="highlight" data-toggle="modal" data-target="#courseModal" href="#">JSON</a></h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
                 </div>
@@ -205,14 +255,14 @@
         </div> 
 
         <div class="container main-heading row mx-auto">
-            <div class="container border col-6">
+            <div class="container border col-md-6">
                 <h3 class="highlight">Creator</h3>
                 <p>This site is created by <em>Johhny J. King</em>. A 
                     graduate of Computer Science from the University of
                     Canada, U.S.A</p>
             </div>
     
-            <div class="container border col-6">
+            <div class="container border col-md-6">
                 <h3 class="highlight">About</h3>
                 <p>This site is about providing people a fun and 
                     creative way of taking web courses.
