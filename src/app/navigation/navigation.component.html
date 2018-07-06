@@ -1,0 +1,12 @@
+
+<nav id="navbarScroll" class="navbar fixed-top">
+  <img class="nav-pic" src="../../assets/img/cancel.png" alt="Navigation Picture"/>
+  <ul class="list" *ngIf="mainPage">
+      <li class="nav-item" *ngFor="let item of mainHeaders">
+        <a class="li-style nav-link" href="#{{ item | lowercase }}"><strong>{{ item }}</strong></a>
+      </li>
+  </ul>
+  <ul class="list" *ngIf="regPage">
+      <li *ngIf="regPage" class="nav-item"><a class="li-style nav-link" href="#"><strong>{{ regHeader }}</strong></a></li>
+  </ul>
+</nav>

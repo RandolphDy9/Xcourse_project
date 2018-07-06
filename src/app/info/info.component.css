@@ -1,0 +1,13 @@
+.medal-pic {
+    float: left;
+    width: 12%;
+    height: 12%;
+    padding: 2px;
+}
+
+.students-pic {
+    width: 210px;
+    height: 240px;
+    display: block;
+    margin: 2% auto;
+}

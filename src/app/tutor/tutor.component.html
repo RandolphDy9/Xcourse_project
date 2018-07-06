@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 id="tutors" class="main-heading highlight">Tutors</h1>
+    <div class="container row mx-auto">
+        <div class="tutor col-md-6" *ngFor="let item of tutors; let i = index">
+            <img class="tutor-pic" src="{{ item.imagePath }}" alt="Picture of Juan">
+            <h4 class="highlight back-style">{{ item.tutorName }}</h4>
+            <button type="button" class="btn btnDanger enrollBtn" (click)="openWindowCustomClass(content)" (click)="getVal('btn' + (i + 1))">Enroll!</button>
+            <p>{{ item.tutorDescription }}</p>
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-d="dismiss">
+    <ngb-alert type="success" (click)="d('Cross click')">You have successfully enrolled to <span class="highlight">{{ name }}</span>!</ngb-alert>
+</ng-template>

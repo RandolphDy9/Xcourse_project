@@ -1,0 +1,40 @@
+<app-navigation></app-navigation>
+<form class="signup-form mx-auto ">
+  <div id="genderPicture">
+      <img id="maleOrFemale" class="tutor-pic" src="{{ imagePath }}" alt="A picture based from gender">
+  </div>
+  <br/><br/>
+  <div class="container form-group row">
+      <label for="inputEmail" class="col-form-label col-sm-2">Email</label>
+      <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputEmail" placeholder="Enter Email" required>
+      </div>
+  </div>
+  <div class="container form-group row">
+      <label for="inputPassword" class="col-form-label col-sm-2">Password</label>
+      <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password" required min-length="8">
+      </div>
+  </div>
+  <div class="row container form-group" id="genderForm">
+  <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" (click)="radioVal('male')" value="male" checked>
+          <label id="gender-male" value="male" class="form-check-label col-sm-2" for="gridRadios1">Male</label>
+      </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" (click)="radioVal('female')" value="female">
+          <label id="gender-female" value="female" class="form-check-label col-sm-2" for="gridRadios2">Female</label>
+      </div>
+  </div>
+
+  <div class="row form-group form-gender col-sm-12 mx-auto">
+      <button type="submit" class="btn btn-primary" id="sign-in">Sign in</button>
+  </div>
+</form>
+
+<div class="container text-center main-heading">
+    <a routerLink="">Go back to home</a>
+</div>
+
+<app-footer></app-footer>
