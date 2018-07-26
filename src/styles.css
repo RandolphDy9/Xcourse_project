@@ -61,14 +61,10 @@ table tr:hover {
 
 @media (max-width: 767.98px) { 
 
-    .nav-item {
+    /* .nav-item {
         display: block;
         padding: 0 2px;
-    }
-    
-    .nav-item:hover {
-        transform: translateY(5px);
-    }
+    } */
 
     header {
         height: 300px;
@@ -93,12 +89,12 @@ table tr:hover {
     html {
         font-size: .95rem;
     }
-
+/* 
     .nav-item a {
         width: 100%;
         margin: 0;
         padding: 0;
-    }
+    } */
 }
 
 @media (max-width: 470px) {
@@ -106,8 +102,8 @@ table tr:hover {
         font-size: .9rem;
     }
 
-    .nav-pic {
+    /* .nav-pic {
         display: block;
         margin: 0 auto;
-    }
+    } */
 }
