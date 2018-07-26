@@ -1,8 +1,7 @@
 .signup-form {
     width: 60%;
     position: relative;
-    /* background-color: #c59e8b5d; */
-    margin-top: 35vh;
+    margin-top: 20vh;
     padding-top: 70px;
     border: 2px solid #444;
 }
@@ -30,6 +29,6 @@
     #genderPicture {
         left: calc(50% - 75px);
         bottom: calc(100% - 75px);
-        background-color: #c59e8b;
+        background-color: #eb4768;
     }
 }

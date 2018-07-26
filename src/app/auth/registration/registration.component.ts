@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -7,14 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent {
 
-  imagePath: string = '../../assets/img/boy.png';
-
-  radioVal(val) {
-    if (val == 'male') {
-      this.imagePath = '../../assets/img/boy.png';
-    } else if (val == 'female') {
-      this.imagePath = '../../assets/img/girl.png';
-    }
+  onSubmitReg(form: NgForm) {
+    const email = form.value.email;
+    const password = form.value.password;
   }
 
 }

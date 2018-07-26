@@ -7,13 +7,13 @@ import { Component, Input } from '@angular/core';
 })
 export class NavigationComponent {
 
-  regPage: Boolean = false;
-  mainPage: Boolean = true;
+  // regPage: Boolean = false;
+  // mainPage: Boolean = true;
 
-  mainHeaders: string[] = [
-    'Tutors', 'Info', 'Courses', 'Schedule'
-  ];
+  // mainHeaders: string[] = [
+  //   'Tutors', 'Info', 'Courses', 'Schedule'
+  // ];
 
-  regHeader: string = 'Home';
+  // regHeader: string = 'Home';
 
 }

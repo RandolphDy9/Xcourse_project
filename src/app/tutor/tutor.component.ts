@@ -1,5 +1,7 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClient } from '@angular/common/http';
+import { Tutors } from '../tutors';
 
 @Component({
   selector: 'app-tutor',
@@ -7,24 +9,31 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./tutor.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class TutorComponent {
+export class TutorComponent implements OnInit {
+
+  tutorObj: Object;
+
+  constructor(private modalService: NgbModal,
+              private http: HttpClient) { }
+
+  ngOnInit() {
+    // this.http.put("https://xcourse-project.firebaseio.com/tutors.json", Tutors)
+    // .subscribe(
+    //   (response) => console.log(response),
+    //   (error) => console.log(error)
+    // );
+
+    this.http.get("https://xcourse-project.firebaseio.com/tutors.json")
+    .subscribe(
+      data => this.tutorObj = data
+    );
+  }
 
   closeResult: string;
   name: string;
-  tutors: any[] = [
-    { imagePath: "../../assets/img/businessman.png", tutorName: "Billy Jay Gates" ,
-      tutorDescription: "is an American business magnate, investor, author, philanthropist, humanitarian, and principal founder of Microsoft Corporation" },
-    { imagePath: "../../assets/img/cool.png", tutorName: "Mark Zucker-Burger" , 
-      tutorDescription: "is an American business magnate, investor, author, philanthropist, humanitarian, and principal founder of Microsoft Corporation" },
-    { imagePath: "../../assets/img/nerd.png", tutorName: "Rex Karlo Cabana" , 
-      tutorDescription: "is an American business magnate, investor, author, philanthropist, humanitarian, and principal founder of Microsoft Corporation" },
-    { imagePath: "../../assets/img/professor.png", tutorName: "Jerry Jones" , 
-      tutorDescription: "is an American business magnate, investor, author, philanthropist, humanitarian, and principal founder of Microsoft Corporation" },
-  ];
-
-  constructor(private modalService: NgbModal) { }
 
   getVal(btnVal) {
+
     if (btnVal == 'btn1') {
       this.name = 'Billy Jay Gates';
     } else if (btnVal == 'btn2') {
