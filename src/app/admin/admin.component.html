@@ -1,0 +1,37 @@
+<app-navigation></app-navigation>
+
+<nav class="container" style="margin: 30px auto;">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" id="admin-course" data-toggle="tab" href="#course" role="tab" aria-controls="course" aria-selected="true">Course Info</a>
+        <a class="nav-item nav-link" id="admin-list" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">Course List</a>
+        <a class="nav-item nav-link" id="admin-users" data-toggle="tab" href="#users" role="tab" aria-controls="list" aria-selected="false">Course Users</a>
+        <a class="nav-item nav-link" id="admin-course-display" data-toggle="tab" href="#display" role="tab" aria-controls="list" aria-selected="false">Course Display</a>
+        <a class="nav-item nav-link" id="admin-questions-display" data-toggle="tab" href="#questions" role="tab" aria-controls="list" aria-selected="false">User Questions</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="course" role="tabpanel" aria-labelledby="admin-course">
+        <div class="row" style="margin: 30px auto;">
+            <div class="col-md-4 text-center">
+                <img class="img-fluid" style="width: 200px; height: 200px;" src="../../../assets/img/worker.png" alt="admin picture">
+                <hr>
+                <h4 class="highlight text-center">Welcome, Admin!</h4>
+            </div>
+            <div class="col-sm-8">
+                <app-admin-courses></app-admin-courses>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="admin-list">
+        <app-admin-details></app-admin-details>
+    </div>
+    <div class="tab-pane fade" id="users" role="tabpanel" aria-labelledby="admin-users">
+        <app-admin-users></app-admin-users>
+    </div>
+    <div class="tab-pane fade" id="display" role="tabpanel" aria-labelledby="admin-course-display">
+        <app-admin-course-display></app-admin-course-display>
+    </div>
+    <div class="tab-pane fade" id="questions" role="tabpanel" aria-labelledby="admin-questions-display">
+        <app-admin-questions></app-admin-questions>
+    </div>
+</div>

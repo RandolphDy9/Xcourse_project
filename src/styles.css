@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+}
+
+.btn:focus {
+    box-shadow: none !important;
+}
+
+.highlight,
+table tr:hover {
+    color: #fd0236;
+    /* font-family: 'Righteous', cursive; */
+}
+
+.no-highlight {
+    font-family: 'Righteous', cursive;
+    color: white;
+}
+
+.card {
+    background: radial-gradient(#eee, #fff);
+    color: #4F4A41;
+}
+
+.main-heading {
+    margin: 60px auto;
+    text-align: center;
+    border-bottom: 2px solid #eb4768;
+    padding-bottom: 1%;
+    width: 30%;
+}
+
+
+.back-style {
+    background: #eb4768;
+    color: white;
+    border-radius: 20px 20px 0 20px;
+}
+
+.tutor-pic {
+    width: 200px;
+    height: 200px;
+    float: left;
+    transform: rotate(0);
+    transition: transition 1s linear;
+    padding: 5px;
+}
+
+.tutor-pic:hover {
+    transform: rotate(15deg);
+}
+
+@media (max-width: 767.98px) { 
+
+    /* .nav-item {
+        display: block;
+        padding: 0 2px;
+    } */
+
+    /* header {
+        height: 300px;
+        background-size: cover;
+        padding-top: 10px;
+        padding-top: 50px;
+    } */
+
+    .tutor-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .main-heading {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 570px) {
+
+    html {
+        font-size: .95rem;
+    }
+/* 
+    .nav-item a {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    } */
+}
+
+@media (max-width: 470px) {
+    html {
+        font-size: .9rem;
+    }
+
+    /* .nav-pic {
+        display: block;
+        margin: 0 auto;
+    } */
+}

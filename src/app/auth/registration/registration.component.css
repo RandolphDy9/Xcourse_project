@@ -1,0 +1,21 @@
+#membership-pic {
+    padding: 10px;
+    display: block;
+    margin: 10px auto;
+    width: 150px;
+    height: 150px;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #007bff;
+}
+
+#sign-in {
+    margin-top:10px;
+    width: 100%;
+}
+
+.has-error {
+    border: 1px solid red;
+}

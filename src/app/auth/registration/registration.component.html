@@ -1,0 +1,141 @@
+<app-navigation></app-navigation>
+<div class="container">
+    <br/>
+    <br/>
+    <div class="row col-sm-12 justify-content-center">
+        <div class="col-sm-4">
+            <img id="membership-pic" class="img-fluid" src="../../assets/img/membership.png" alt="Registration image">
+        </div>
+
+        <div class="col-sm-8" style="margin: 20px 0;">
+            <h1 class="highlight">Join Us Now!</h1>
+            <hr>
+            <p class="lead">We are Asia's largest learning site.</p>
+        </div>
+
+    </div>
+
+    <!-- <form (ngSubmit)="onSubmitReg(f)" #f="ngForm">
+        <input type="hidden" class="form-control" name="$key" #$key="ngModel" [(ngModel)]="usersServices.selectedUser.$key">
+        <div class="form-group row">
+            <label for="fullname" class="col-2 text-right">Fullname:</label>
+            <input type="text" class="form-control col-7" name="fullname" #fullname="ngModel" [(ngModel)]="usersServices.selectedUser.fullname" placeholder="User fullname...">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-2 text-right">Email:</label>
+            <input type="email" class="form-control col-7" name="email" #email="ngModel" [(ngModel)]="usersServices.selectedUser.email" placeholder="User email...">
+        </div>
+        
+        <div class="form-group">
+            <div class="container text-right col-md-11">
+                <button type="submit" class="btn btn-primary" [disabled]=!f.valid>Submit!</button>
+                <button type="button" class="btn btn-secondary" (click)="onReset(f)">Reset</button>
+            </div>
+        </div>
+    </form> -->
+
+    <div class="container">
+        <div class="col-12">
+            <form (ngSubmit)="onSubmitReg(f)" #f="ngForm" style="padding: 20px;" class="border shadow rounded" style="padding: 10px; margin: auto 30px;">
+                <input type="hidden" class="form-control" name="$key" #$key="ngModel" [(ngModel)]="usersServices.selectedUser.$key">
+                <div class="col-12 row justify-content-center align-items-center">
+                    <div class="col-md-10">
+                        <h5 class="highlight">Personal Information</h5>
+                        <hr>
+                        <div class="container form-group row justify-content-center">
+                            <label for="fullname" class="col-form-label col-3 text-right">Full Name</label>
+                            <div class="col-7">
+                                <input type="text" name="fullname" class="form-control" id="inputName" #fullname="ngModel" [(ngModel)]="usersServices.selectedUser.fullname"
+                                    [class.has-error]="fullname.touched && fullname.invalid" placeholder="Enter Full Name" required>
+                            </div>
+                        </div>
+                        <div class="container form-group row justify-content-center">
+                            <label for="birthdate" class="col-form-label col-3 text-right">Birthday</label>
+                            <div class="col-7">
+                                <input type="date" name="birthdate" class="form-control" id="inputDate" #birthdate="ngModel" [(ngModel)]="usersServices.selectedUser.birthdate"
+                                    [class.has-error]="birthdate.touched && birthdate.invalid" placeholder="Enter Birthday" required>
+                            </div>
+                            <!-- <label for="age" class="col-form-label col-2 text-right">Age</label>
+                            <div class="col-3">
+                                <input type="number" name="age" class="form-control" id="inputAge" #age="ngModel" [(ngModel)]="usersServices.selectedUser.age"
+                                    [class.has-error]="age.touched && age.invalid" placeholder="Enter Birthday" required>
+                            </div> -->
+                        </div>
+                        <div class="container form-group row justify-content-center">
+                            <label for="email" class="col-form-label col-3 text-right">Email Add.</label>
+                            <div class="col-7">
+                                <input type="email" name="email" class="form-control" id="inputEmail" #email="ngModel" [(ngModel)]="usersServices.selectedUser.email"
+                                    [class.has-error]="email.touched && email.invalid" placeholder="Enter Email" required>
+                            </div>
+                        </div>
+                        <div class="row container form-group justify-content-center" id="genderForm">
+                            <legend class="col-form-label col-3 pt-0 text-center">Gender</legend>
+                            <div class="row col-7">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios1" value="male">
+                                    <label id="gender-male" value="male" class="form-check-label col-2">Male</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios2" value="female">
+                                    <label id="gender-female" value="female" class="form-check-label col-2">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 row justify-content-center align-items-center">
+                    <div class="col-md-10">
+                        <h5 class="highlight">Card payment</h5>
+                        <hr>
+                        <div class="row container form-group justify-content-center" id="bankForm">
+                            <legend class="col-form-label col-3 pt-0 text-center">Card</legend>
+                            <div class="row col-7">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios3" value="BPI">
+                                    <label id="card-bpi" value="bpi" class="form-check-label col-2">BPI</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios4" value="BDO">
+                                    <label id="card-bdo" value="bdo" class="form-check-label col-2">BDO</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container form-group row justify-content-center">
+                            <label for="accnumber" class="col-form-label col-3 text-right">Account#</label>
+                            <div class="col-7">
+                                <input type="number" name="accnumber" class="form-control" id="accNumber" #acc="ngModel" [(ngModel)]="usersServices.selectedUser.accnumber"
+                                    [class.has-error]="acc.touched && acc.invalid" placeholder="Enter Account Number" required>
+                            </div>
+                        </div>
+                        <div class="container form-group row justify-content-center">
+                            <label for="expiration" class="col-form-label col-3 text-right">Expiration</label>
+                            <div class="col-7">
+                                <input type="month" name="expiration" class="form-control" id="expiration" #exp="ngModel" [(ngModel)]="usersServices.selectedUser.expiration"
+                                    [class.has-error]="exp.touched && exp.invalid" placeholder="MMMM/YY" required>
+                            </div>
+                        </div>
+                        <div class="container form-group row justify-content-center">
+                            <label for="code" class="col-form-label col-3 text-right">Code</label>
+                            <div class="col-7">
+                                <input type="number" name="code" class="form-control" id="code" #code="ngModel" [(ngModel)]="usersServices.selectedUser.code"
+                                    [class.has-error]="code.touched && code.invalid" placeholder="Enter Code" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 text-right">
+                    <hr>
+                    <button type="submit" (click)="afterReg()" class="btn btn-primary col-2" id="sign-in" [disabled]="!f.valid">Sign in!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center main-heading">
+    <a routerLink="/login" style="cursor: pointer;">Already have an account?</a>
+    <br/>
+    <a routerLink="">Go back to home</a>
+</div>

@@ -1,0 +1,59 @@
+.align-middle {
+    text-align: center;
+}
+
+.header-content {
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    /* border-left: 5px solid #9d1531;
+    border-right: 5px solid #9d1531; */
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    padding: 5rem 2rem;
+    /* background: radial-gradient(#ebe3e5, #f4a4b4); */
+    background: linear-gradient(#333, #f4a4b4);
+    color: white;
+    border-radius: 0;
+}
+
+.welcome-greeting {
+    font-size: 60px;
+    margin: 0;
+}
+
+.icon-heading {
+    width: 70px;
+    height: 70px;
+}
+
+#keys {
+    padding: 5px;
+    background: linear-gradient(#eb607c, #ee3a5e);
+}
+
+#keys p,
+#keys h4 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: white;
+}
+
+#keys p {
+    font-size: 80%;
+}
+
+/* @media (max-width: 470px) {
+
+    .header-content {
+        font-size: .95rem;
+    }
+
+    .welcome-greeting {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+} */

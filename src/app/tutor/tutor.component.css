@@ -1,0 +1,31 @@
+.dark-modal .modal-content {
+    background-color: #292b2c;
+    color: white;
+}
+
+.dark-modal .close {
+    color: white;
+}
+
+.btnDanger {
+    border: 2px solid #eb4768;
+    background-color: white;
+    width: calc(100% - 200px);
+}
+
+.btnDanger:hover {
+    background-color: #eb4768;
+    color: white;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.alert {
+    margin-bottom: 0;
+}
+
+.close:not(:disabled):not(.disabled) {
+    color: red;
+}

@@ -1,0 +1,27 @@
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.col-md {
+    padding: 20px;
+}
+
+.jumbotron {
+    border-radius: 0;
+}
+
+#jumbo-back {
+    padding: 0;
+    position: relative;
+    margin-bottom: 8rem;
+    background: linear-gradient(#eb607c, #ee3a5e);
+}
+
+#jumbo-heading {
+    padding: 3rem 0;
+    position: relative;
+    top: 6rem;
+    background-color: rgb(240, 231, 231);
+}

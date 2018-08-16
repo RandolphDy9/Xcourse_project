@@ -1,0 +1,42 @@
+<br/><br/>
+<div class="container">
+  <h4>You have chosen to enroll to {{ name }}</h4>
+  <hr>
+  <h4 class="highlight">Course Content:</h4>
+  <div class="col-12 row">
+    <div class="col-sm-8 border">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Lesson 1</li>
+        <li class="list-group-item">Lesson 2</li>
+        <li class="list-group-item">Lesson 3</li>
+        <li class="list-group-item">Lesson 4</li>
+        <li class="list-group-item">Lesson 5</li>
+        <li class="list-group-item">Lesson 6</li>
+        <li class="list-group-item">Lesson 7</li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <div class="container">
+        <h4 class="highlight">Got something to ask?</h4>
+        <hr>
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <input type="hidden" class="form-control" name="$key" #$key="ngModel" [(ngModel)]="courseService.selectedQues.$key">
+          <div class="form-group">
+            <label for="subject">Title</label>
+            <input type="text" class="form-control" name="subject" #subject="ngModel" [(ngModel)]="courseService.selectedQues.subject">
+          </div>
+          <div class="form-group">
+            <label for="body">Body</label>
+            <textarea width="400" class="form-control" name="body" #body="ngModel" [(ngModel)]="courseService.selectedQues.body" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary float-right">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container text-center main-heading">
+        <a routerLink="/courses" style="cursor: pointer;">Go back to courses?</a>
+    </div>
+
+  </div>
+</div>
