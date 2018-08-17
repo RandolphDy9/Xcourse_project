@@ -21,6 +21,10 @@
     border-bottom: 1px solid #007bff;
 }
 
+.has-error {
+    border: 1px solid red;
+}
+
 @media (max-width: 767.98px) {
     #genderPicture {
         left: calc(50% - 75px);

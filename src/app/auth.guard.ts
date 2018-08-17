@@ -17,7 +17,7 @@ export class AuthGuard implements CanActivate {
     if (this.authService.AdminFlag == true) {
       return true;
     } else {
-      this.route.navigate(['page-not-found']);
+      this.route.navigate(['login']);
       return false;
     }
 

@@ -31,7 +31,7 @@ export class AdminUsersComponent implements OnInit {
 
   onRemove(key: string) {
     if(confirm("Delete this user?") == true) {
-      this.usersServices.deleteUser(key);
+      this.usersServices.removeUserFromAdmin(key);
       this.toastr.warning('You have deleted a user.', 'User Deleted!');
     }
   }

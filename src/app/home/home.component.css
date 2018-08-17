@@ -12,7 +12,6 @@
 .jumbotron {
     margin-bottom: 0;
     padding: 5rem 2rem;
-    /* background: radial-gradient(#ebe3e5, #f4a4b4); */
     background: linear-gradient(#333, #f4a4b4);
     color: white;
     border-radius: 0;
@@ -29,8 +28,9 @@
 }
 
 #keys {
-    padding: 5px;
-    background: linear-gradient(#eb607c, #ee3a5e);
+    /* padding: 5px; */
+    /* background: linear-gradient(#eb607c, #ee3a5e); */
+    background: linear-gradient(#f4a4b4, #f7f7f7);
 }
 
 #keys p,
@@ -38,7 +38,6 @@
     margin: 0;
     padding: 0;
     text-align: left;
-    color: white;
 }
 
 #keys p {

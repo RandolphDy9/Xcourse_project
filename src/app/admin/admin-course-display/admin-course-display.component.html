@@ -57,7 +57,7 @@
 
           <mbsc-form [options]="theme">
               <div class="mbsc-form-group" *ngFor="let course of courses; let i = index">
-                  <mbsc-checkbox color="primary" (change)="checkboxChange()">{{ course.title }}<span class="mbsc-desc">{{ course.creator }}</span></mbsc-checkbox>
+                  <mbsc-checkbox (change)="checkboxChange()">{{ course.title }}<span class="mbsc-desc">{{ course.creator }}</span></mbsc-checkbox>
                   <!-- [(ngModel)]="checkboxModel[i].value"
                   <mbsc-checkbox [(ngModel)]="checkboxModel[1].value" (change)="checkboxChange()">Option 2<span class="mbsc-desc">Empty checkbox</span></mbsc-checkbox>
                   <mbsc-checkbox [(ngModel)]="checkboxModel[2].value" (change)="checkboxChange()" [disabled]="true">Option 3<span class="mbsc-desc">Disabled checkbox</span></mbsc-checkbox>

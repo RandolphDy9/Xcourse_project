@@ -10,12 +10,14 @@ import { AuthService } from './auth/auth.service';
 import { CourseInfoComponent } from './course/course-info/course-info.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from './auth.guard';
+import { RegistrationSuccessComponent } from './auth/registration/registration-success/registration-success.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'courses', component: CourseComponent },
   { path: 'tutors', component: TutorComponent },
   { path: 'registration', component: RegistrationComponent },
+  { path: 'registration-success', component: RegistrationSuccessComponent },
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
   { path: 'course-info', component: CourseInfoComponent },

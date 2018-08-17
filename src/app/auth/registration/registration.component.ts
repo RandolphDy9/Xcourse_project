@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UsersServices } from '../users.service';
 import { Users } from '../users';
 import { AuthService } from '../auth.service';
@@ -13,12 +13,28 @@ import { Router } from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
 
-  password = '';
   users: Users[];
 
-  constructor(private usersServices: UsersServices, 
-              private authService: AuthService,
-              private route: Router) {}
+  form: FormGroup;
+
+  constructor(private usersServices: UsersServices,
+    private authService: AuthService,
+    private route: Router,
+    private fb: FormBuilder) {
+
+    this.form = this.fb.group({
+      $id: '',
+      fullname: ['', Validators.required],
+      birthdate: '',
+      email: '',
+      gender: '',
+      card: '',
+      accnumber: '',
+      expiration: '',
+      code: ''
+    });
+
+  }
 
   ngOnInit() {
     var data = this.usersServices.getUsers();
@@ -26,25 +42,35 @@ export class RegistrationComponent implements OnInit {
       this.users = [];
       item.forEach(element => {
         var x = element.payload.toJSON();
-        x["$key"] = element.key;
+        x["$id"] = element.key;
         this.users.push(x as Users);
       });
     });
   }
 
-  onSubmitReg(form: NgForm) {
-    this.password = this.usersServices.getPass();
-    console.log(form.value + "password: " + this.password);
+  onSubmitReg() {
+    const generatedPassword = this.usersServices.generatePassword();
+    console.log(this.form.value + "generatedPassword: " + generatedPassword);
 
-    if (form.value.$key == null) {
-      this.usersServices.insertUser(form.value, this.password);
+    if (this.form.value.$id == null) {
+      this.usersServices.displayUserToAdmin(this.form.value, generatedPassword);
     }
-    
-    this.authService.registerUser(form.value.email, this.password);
+
+    this.authService.registerUserToFirebase(this.form.value.email, generatedPassword);
+
   }
 
-  afterReg() {
-    this.route.navigate(['login']);
-  }
+  // onSubmitReg(form: NgForm) {
+  //   const generatedPassword = this.usersServices.generatePassword();
+  //   console.log(form.value + "generatedPassword: " + generatedPassword);
+
+  //   if (form.value.$id == null) {
+  //     this.usersServices.displayUserToAdmin(form.value, generatedPassword);
+  //   }
+
+  //   this.authService.registerUserToFirebase(form.value.email, generatedPassword);
+  //   this.route.navigate(['registration-success']);
+  // }
+
 
 }

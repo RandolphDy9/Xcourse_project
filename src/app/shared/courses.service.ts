@@ -91,12 +91,4 @@ export class CourseServices implements OnInit {
         });
     }
 
-    searchCourses(title: string): Observable<Courses[]> {
-        if (!title.trim()) {
-            return of([]);
-        }
-
-        // return 
-    }
-
 }

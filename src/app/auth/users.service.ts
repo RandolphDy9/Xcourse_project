@@ -21,7 +21,7 @@ export class UsersServices {
         return this.usersList;
     }
 
-    insertUser(users: Users, password: string) {
+    displayUserToAdmin(users: Users, password: string) {
         console.log('Insert user values: ' + users);
         this.usersList.push({
             fullname: users.fullname,
@@ -35,11 +35,11 @@ export class UsersServices {
         console.log('Insert user values: ' + users);
     }
 
-    deleteUser(key: string) {
-        this.usersList.remove(key);
+    removeUserFromAdmin(id: string) {
+        this.usersList.remove(id);
     }
 
-    getPass() {
+    generatePassword() {
         var randomString = Math.random().toString(36).substring(2,8);
         console.log(randomString);
         return randomString;

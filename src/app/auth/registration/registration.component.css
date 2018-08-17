@@ -11,11 +11,16 @@
     border-bottom: 1px solid #007bff;
 }
 
-#sign-in {
+/* #sign-in {
     margin-top:10px;
     width: 100%;
-}
+} */
 
 .has-error {
     border: 1px solid red;
+}
+
+#regForm {
+    padding: 10px; 
+    margin: auto 30px;
 }

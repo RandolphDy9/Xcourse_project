@@ -2,7 +2,7 @@ import { MbscModule } from '@mobiscroll/angular';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TutorComponent } from './tutor/tutor.component';
@@ -33,6 +33,9 @@ import { CourseInfoComponent } from './course/course-info/course-info.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AdminQuestionsComponent } from './admin/admin-questions/admin-questions.component';
 
+import { RegistrationSuccessComponent } from './auth/registration/registration-success/registration-success.component';
+import { FilterPipe } from './course/filter.pipe';
+
 firebase.initializeApp(environment.firebaseConfig);
 
 @NgModule({
@@ -53,7 +56,9 @@ firebase.initializeApp(environment.firebaseConfig);
     AdminCourseDisplayComponent,
     CourseInfoComponent,
     PageNotFoundComponent,
-    AdminQuestionsComponent
+    AdminQuestionsComponent,
+    RegistrationSuccessComponent,
+    FilterPipe
   ],
   imports: [ 
     MbscModule, 
@@ -65,7 +70,8 @@ firebase.initializeApp(environment.firebaseConfig);
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService, CourseServices],
   bootstrap: [AppComponent]

@@ -25,3 +25,20 @@
     top: 6rem;
     background-color: rgb(240, 231, 231);
 }
+
+#searching {
+    margin: 30px auto;
+}
+
+#searchIcon {
+    color: white;
+    background-color: red;
+}
+
+.add-cursor {
+    cursor: pointer;
+}
+
+#cardPadding {
+    padding: 10px;
+}
