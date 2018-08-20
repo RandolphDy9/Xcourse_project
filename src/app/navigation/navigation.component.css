@@ -1,0 +1,38 @@
+nav {
+    background-color: #17120f;
+    color: rgb(245, 241, 242);
+    /* box-shadow: 3px 3px 3px 3px rgba(153, 153, 153, 0.767); */
+}
+
+.nav-pic {
+    width: 60px;
+    height: 60px;
+}
+
+.nav-item {
+    padding: 0 10px;
+}
+
+.li-style:hover,
+.active {
+    border-bottom: 1px solid #fd0236;
+}
+
+.li-style {
+    color: #fff;
+    text-align: center;
+}
+
+/* @media (max-width: 570px) {
+
+    .nav-pic {
+        float: left;
+    }
+
+    .nav-pic,
+    .list {
+        display: block;
+        margin: 0 auto;
+    }
+
+} */

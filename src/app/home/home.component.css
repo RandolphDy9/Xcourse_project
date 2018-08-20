@@ -1,0 +1,58 @@
+
+.header-content {
+    font-family: 'Righteous', cursive;
+    text-align: center;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    padding: 10rem 2rem;
+    /* background: linear-gradient(#333, #f4a4b4); */
+    background: url('../../assets/img/back1.jpeg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    border-radius: 0;
+}
+
+.welcome-greeting {
+    font-size: 60px;
+    margin: 0;
+}
+
+.icon-heading {
+    width: 70px;
+    height: 70px;
+}
+
+#keys {
+    background: linear-gradient(#eb4768e0, #f7f7f7);
+    /* background: linear-gradient(#17120f, #f7f7f7); */
+}
+
+#keys p,
+#keys h4 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#keys p {
+    font-size: 80%;
+}
+
+.vision {
+    padding: 10px;
+}
+
+/* @media (max-width: 470px) {
+
+    .header-content {
+        font-size: .95rem;
+    }
+
+    .welcome-greeting {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+} */

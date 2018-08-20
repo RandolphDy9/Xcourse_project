@@ -1,0 +1,44 @@
+<app-navigation></app-navigation>
+
+<div class="jumbotron" id="jumbo-back">
+    <div class="jumbotron border shadow container" id="jumbo-heading">
+        <h1 class="text-center highlight">{{ message }}</h1>
+        <p class="text-center lead">Courses are available from <span class="highlight">{{ startDate | date:fullDate }}</span>
+            to
+            <span class="highlight">{{ endDate | date:fullDate }}</span>
+        </p>
+    </div>
+</div>
+
+
+<div id="searchBox" class="container">
+    <div class="col-8">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="searchIcon">
+                    <i class="fas fa-search"></i>
+                </span>
+            </div>
+            <input type="text" [(ngModel)]="textInput">
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <h3 id="courses" class="highlight">Courses</h3>
+    <div class="container row mx-auto">
+        <div class="col-sm-6 col-md-4 col-xl-3 border" *ngFor="let course of courses | filterCourses: textInput">
+            <div class="container" id="cardPadding">
+                <img class="card-img-top img-fluid" src="{{ course.image }}" alt="Card image cap">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title highlight add-cursor" (click)="getCourse(i)">{{ course.title }}</h4>
+                    <p class="card-text">{{ course.description }}</p>
+                    <p>Creator: {{ course.creator }}</p>
+                    <p>Price: $ {{ course.price }}</p>
+                    <button type="button" class="btn btn-primary mt-auto" (click)="onEnroll()">Enroll Course!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

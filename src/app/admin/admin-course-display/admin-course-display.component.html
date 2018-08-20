@@ -1,0 +1,69 @@
+<div class="container mbsc-padding">
+  <h4 class="highlight">Courses Display</h4>
+  <hr>
+  <div class="col-10" style="margin: 0 auto;">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+        <div class="container">
+          <h6 class="highlight">Date Range:</h6>
+          <div class="col-10">
+            <mbsc-form [options]="theme">
+              <div class="mbsc-form-group">
+                <mbsc-range>
+                  <mbsc-range-start placeholder="Please select date" name="startDate" ngModel>Start Date</mbsc-range-start>
+                  <mbsc-range-end placeholder="Please select date" name="endDate" ngModel>End Date</mbsc-range-end>
+                </mbsc-range>
+              </div>
+            </mbsc-form>
+          </div>
+        </div>
+
+        
+        <div class="container mbsc-padding">
+          <h6 class="highlight">Headline:</h6>
+          <div class="col-10">
+            <div class="form-group row">
+              <label for="headline" class="col-3 text-right">Display:</label>
+              <input type="text" class="form-control col-9" name="headline" ngModel required>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="container">
+          <h6 class="highlight">Courses to Display:</h6>
+          <!-- <div class="col-10">
+            <div class="form-group">
+              <div class="form-check" *ngFor="let course of courses; let i = index" style="margin: 10px auto;">
+                <input class="form-check-input" type="checkbox" name="course{{i}}" value="course{{i}}" id="course{{i}}" ngModel required>
+                <label class="form-check-label" for="course{{i}}">
+                  {{ course.title }} - by {{ course.creator }}
+                </label>
+              </div>
+            </div>
+
+          </div> -->
+
+          <mbsc-form [options]="theme">
+              <div class="mbsc-form-group" *ngFor="let course of courses; let i = index">
+                  <mbsc-checkbox (change)="checkboxChange()">{{ course.title }}<span class="mbsc-desc">{{ course.creator }}</span></mbsc-checkbox>
+                  <!-- [(ngModel)]="checkboxModel[i].value"
+                  <mbsc-checkbox [(ngModel)]="checkboxModel[1].value" (change)="checkboxChange()">Option 2<span class="mbsc-desc">Empty checkbox</span></mbsc-checkbox>
+                  <mbsc-checkbox [(ngModel)]="checkboxModel[2].value" (change)="checkboxChange()" [disabled]="true">Option 3<span class="mbsc-desc">Disabled checkbox</span></mbsc-checkbox>
+                  <mbsc-checkbox [(ngModel)]="checkboxModel[3].value" (change)="checkboxChange()" [disabled]="true">Option 4<span class="mbsc-desc">Disabled and checked checkbox</span></mbsc-checkbox> -->
+              </div>
+              <div class="mbsc-padding">
+                  {{selOptions}} selected
+              </div>
+          </mbsc-form>
+          
+
+        </div>
+
+        <div class="container text-right">
+          <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Save Changes</button>
+        </div>
+      </form>
+  </div>
+  
+</div>

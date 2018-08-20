@@ -1,0 +1,35 @@
+
+  <div class="container">
+    <h4 class="highlight">Course Information</h4>
+    <hr>
+    <form (ngSubmit)="onSubmitCourse(f)" #f="ngForm">
+      <input type="hidden" class="form-control" name="$key" #$key="ngModel" [(ngModel)]="courseService.selectedCourse.$key">
+      <div class="form-group row">
+        <label for="title" class="col-2 text-right">Title:</label>
+        <input type="text" class="form-control col-9" name="title" #title="ngModel" [(ngModel)]="courseService.selectedCourse.title" placeholder="Course title..." required>
+      </div>
+      <div class="form-group row">
+        <label for="description" class="col-2 text-right">Description:</label>
+        <input type="text" class="form-control col-9" name="description" #description="ngModel" [(ngModel)]="courseService.selectedCourse.description" placeholder="Course description..." required>
+      </div>
+      <div class="form-group row">
+        <label for="creator" class="col-2 text-right">Creator:</label>
+        <input type="text" class="form-control col-9" name="creator" #creator="ngModel" [(ngModel)]="courseService.selectedCourse.creator" placeholder="Course creator..." required>
+      </div>
+      <div class="form-group row">
+        <label for="price" class="col-2 text-right">Price:</label>
+        <input type="number" class="form-control col-9" name="price" #price="ngModel" [(ngModel)]="courseService.selectedCourse.price" placeholder="Course price..." required>
+      </div>
+      <div class="form-group row">
+        <label for="image" class="col-2 text-right">ImageURL:</label>
+        <input class="form-control col-9" name="image" #image="ngModel" [(ngModel)]="courseService.selectedCourse.image" placeholder="Course image URL..." required>
+      </div>
+      <div class="form-group">
+        <div class="container text-right col-md-11">
+            <button type="submit" class="btn btn-primary" [disabled]=!f.valid>Submit!</button>
+            <button type="button" class="btn btn-secondary" (click)="onReset(f)">Reset</button>
+        </div>
+      </div>
+      
+    </form>
+  </div>
