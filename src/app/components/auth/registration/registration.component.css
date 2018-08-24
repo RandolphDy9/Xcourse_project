@@ -1,0 +1,38 @@
+#membership-pic {
+    padding: 10px;
+    display: block;
+    margin: 10px auto;
+    width: 150px;
+    height: 150px;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #007bff;
+}
+
+#head {
+    margin: 20px 0;
+}
+
+.has-error {
+    border: 1px solid red;
+}
+
+.check-icon {
+    color: green;
+}
+
+#regForm {
+    padding: 10px; 
+    margin: auto 30px;
+}
+
+.text-muted {
+    color: orangered !important;
+}
+
+#anchor {
+    cursor: pointer;
+    color: #007bff;
+}

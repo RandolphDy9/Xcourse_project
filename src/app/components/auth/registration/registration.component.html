@@ -1,0 +1,231 @@
+<div class="container">
+    <br/><br/>
+    <div class="row col-12 justify-content-center">
+        <div class="col-sm-4">
+            <img id="membership-pic" class="img-fluid" src="../../assets/img/membership.png" alt="Registration image">
+        </div>
+
+        <div id="head" class="col-sm-8">
+            <h1 class="highlight">Join Us Now!</h1>
+            <hr>
+            <p class="lead">We are Asia's largest learning site.</p>
+        </div>
+    </div>
+
+    <!-- <div class="container">
+        <div class="col-12"> -->
+
+    <form [formGroup]="form" class="border shadow rounded" id="regForm">
+        <input type="hidden" class="form-control" formControlName="$id">
+        <div class="col-12 row justify-content-center" style="padding-right: 0">
+            <div class="col-12 col-md-10">
+                <h5 class="highlight">Personal Information</h5>
+                <hr>
+                <div class="col-12 container form-group row justify-content-center">
+                    <label for="fullname" class="col-form-label col-12 col-lg-3 text-right">Fullname</label>
+                    <div class="col-11 col-lg-7">
+                        <input formControlName="fullname" type="text" class="form-control" id="inputName" placeholder="Enter Full Name" [class.has-error]="form.controls['fullname'].dirty && form.controls['fullname'].invalid">
+                        <span class="text-muted" *ngIf="form.controls['fullname'].dirty && form.controls.fullname.invalid">Fullname
+                            must be provided.</span>
+                    </div>
+                    <span class="col-1"><i class="fas fa-check-circle check-icon" *ngIf="form.controls.fullname.valid"></i></span>
+
+                </div>
+                <div class="col-12 container form-group row justify-content-center">
+                    <label for="birthdate" class="col-form-label col-12 col-lg-3 text-right">Birthday</label>
+                    <div class="col-11 col-lg-7">
+                        <input formControlName="birthdate" type="date" class="form-control" id="inputDate" placeholder="Enter Birthday" [class.has-error]="form.controls['birthdate'].dirty && form.controls['birthdate'].invalid">
+                        <span class="text-muted" *ngIf="form.controls['birthdate'].dirty && form.controls.birthdate.invalid">Birthday
+                            must be provided.</span>
+                    </div>
+                    <span class="col-1"><i class="fas fa-check-circle check-icon" *ngIf="form.controls.birthdate.valid"></i></span>
+
+                </div>
+                <div class="col-12 container form-group row justify-content-center">
+                    <label for="email" class="col-form-label col-12 col-lg-3 text-right">Email Add.</label>
+                    <div class="col-11 col-lg-7">
+                        <input formControlName="email" type="email" class="form-control" id="inputEmail" placeholder="Enter Email" [class.has-error]="form.controls['email'].dirty && form.controls['email'].invalid">
+                        <span class="text-muted" *ngIf="form.controls['email'].dirty && form.controls.email.invalid">Email
+                            must be provided.</span>
+                    </div>
+                    <span class="col-1"><i class="fas fa-check-circle check-icon" *ngIf="form.controls.email.valid"></i></span>
+
+                </div>
+                <div class="col-12 row container form-group justify-content-center" id="genderForm">
+                    <legend class="col-form-label col-12 col-lg-3 pt-0 text-right">Gender</legend>
+                    <div class="row col-11 col-lg-7">
+                        <div class="form-check">
+                            <input formControlName="gender" class="form-check-input" type="radio" id="male" value="male">
+                            <label for="male" id="gender-male" value="male" class="form-check-label col-6">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input formControlName="gender" class="form-check-input" type="radio" id="female" value="female">
+                            <label for="female" id="gender-female" value="female" class="form-check-label col-6">Female</label>
+                        </div>
+                        <span class="text-muted" *ngIf="form.controls.gender.invalid">Please select your gender.</span>
+                    </div>
+                    <span class="col-1 text-right"><i class="fas fa-check-circle check-icon" *ngIf="form.controls.gender.valid"></i></span>
+
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="col-12 row justify-content-center">
+            <div class="col-12 col-md-10">
+                <h5 class="highlight">Card payment</h5>
+                <hr>
+                <div class="col-12 row container form-group justify-content-center" id="bankForm">
+                    <legend class="col-form-label col-12 col-lg-3 pt-0 text-right">Card</legend>
+                    <div class="row col-11 col-lg-7">
+                        <div class="form-check">
+                            <input formControlName="card" class="form-check-input" type="radio" id="BPI" value="BPI">
+                            <label for="BPI" id="card-bpi" value="bpi" class="form-check-label col-6">BPI</label>
+                        </div>
+                        <div class="form-check">
+                            <input formControlName="card" class="form-check-input" type="radio" id="BDO" value="BDO">
+                            <label for="BDO" id="card-bdo" value="bdo" class="form-check-label col-6">BDO</label>
+                        </div>
+                        <span class="text-muted" *ngIf="form.controls.card.invalid">Please select your card.</span>
+                    </div>
+                    <span class="col-1 text-right"><i class="fas fa-check-circle check-icon" *ngIf="form.controls.card.valid"></i></span>
+
+                </div>
+                <div class="col-12 container form-group row justify-content-center">
+                    <label for="accnumber" class="col-form-label col-12 col-lg-3 text-right">Account#</label>
+                    <div class="col-11 col-lg-7">
+                        <input formControlName="accnumber" type="number" class="form-control" id="accNumber" placeholder="Enter 12-digit Account Number"
+                            [class.has-error]="form.controls['accnumber'].dirty && form.controls['accnumber'].invalid">
+                        <span class="text-muted" *ngIf="form.controls['accnumber'].dirty && form.controls.accnumber.invalid">12-digit
+                            Account number must be provided.</span>
+                    </div>
+                    <span class="col-1"><i class="fas fa-check-circle check-icon" *ngIf="form.controls.accnumber.valid"></i></span>
+
+                </div>
+                <div class="col-12 container form-group row justify-content-center">
+                    <label for="expiration" class="col-form-label col-12 col-lg-3 text-right">Expiration</label>
+                    <div class="col-11 col-lg-7">
+                        <input formControlName="expiration" type="month" class="form-control" id="expiration" [class.has-error]="form.controls['expiration'].dirty && form.controls['expiration'].invalid">
+                        <span class="text-muted" *ngIf="form.controls['expiration'].dirty && form.controls.expiration.invalid">Please
+                            provide card expiration date.</span>
+                    </div>
+                    <span class="col-1"><i class="fas fa-check-circle check-icon" *ngIf="form.controls.expiration.valid"></i></span>
+
+                </div>
+                <div class="col-12 container form-group row justify-content-center">
+                    <label for="code" class="col-form-label col-12 col-lg-3 text-right">Code</label>
+                    <div class="col-11 col-lg-7">
+                        <input formControlName="code" type="number" class="form-control" id="code" placeholder="Enter 4-digit Code" [class.has-error]="form.controls['code'].dirty && form.controls['code'].invalid">
+                        <span class="text-muted" *ngIf="form.controls['code'].dirty && form.controls.code.invalid">Please
+                            provide 4-digit code for card.</span>
+                    </div>
+                    <span class="col-1"><i class="fas fa-check-circle check-icon" *ngIf="form.controls.code.valid"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 text-right">
+            <hr>
+            <button type="button" (click)="onSubmitReg()" [disabled]="form.invalid" class="btn btn-primary" id="sign-in">Register!</button>
+        </div>
+    </form>
+
+    <!-- TEMPLATE DRIVEN APPROACH
+            <form (ngSubmit)="onSubmitReg(f)" #f="ngForm" style="padding: 20px;" class="border shadow rounded" style="padding: 10px; margin: auto 30px;">
+                <input type="hidden" class="form-control" #$id="ngModel" [(ngModel)]="usersServices.selectedUser.$id">
+                <div class="col-12 row justify-content-center">
+                    <div class="col-12 col-md-10">
+                        <h5 class="highlight">Personal Information</h5>
+                        <hr>
+                        <div class="col-12 container form-group row">
+                            <label for="fullname" class="col-form-label col-12 col-lg-3 text-right">Full Name</label>
+                            <div class="col-12 col-lg-7">
+                                <input type="text" class="form-control" id="inputName" #fullname="ngModel" [(ngModel)]="usersServices.selectedUser.fullname"
+                                    [class.has-error]="fullname.dirty && fullname.invalid" placeholder="Enter Full Name" required>
+                            </div>
+                        </div>
+                        <div class="col-12 container form-group row">
+                            <label for="birthdate" class="col-form-label col-12 col-lg-3 text-right">Birthday</label>
+                            <div class="col-12 col-lg-7">
+                                <input type="date" class="form-control" id="inputDate" #birthdate="ngModel" [(ngModel)]="usersServices.selectedUser.birthdate"
+                                    [class.has-error]="birthdate.dirty && birthdate.invalid" placeholder="Enter Birthday" required>
+                            </div>
+                        </div>
+                        <div class="col-12 container form-group row">
+                            <label for="email" class="col-form-label col-12 col-lg-3 text-right">Email Add.</label>
+                            <div class="col-12 col-lg-7">
+                                <input type="email" class="form-control" id="inputEmail" #email="ngModel" [ngModel]="usersServices.selectedUser.email"
+                                    [class.has-error]="email.dirty && email.invalid" placeholder="Enter Email" required>
+                            </div>
+                        </div>
+                        <div class="col-12 row container form-group" id="genderForm">
+                            <legend class="col-form-label col-12 col-lg-3 pt-0 text-right">Gender</legend>
+                            <div class="row col-12 col-lg-7">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="male">
+                                    <label id="gender-male" value="male" class="form-check-label col-2">Male</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="female">
+                                    <label id="gender-female" value="female" class="form-check-label col-2">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 row justify-content-center">
+                    <div class="col-md-10">
+                        <h5 class="highlight">Card payment</h5>
+                        <hr>
+                        <div class="col-12 row container form-group justify-content-center" id="bankForm">
+                            <legend class="col-form-label col-12 col-lg-3 pt-0 text-right">Card</legend>
+                            <div class="row col-12 col-lg-7">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="BPI">
+                                    <label id="card-bpi" value="bpi" class="form-check-label col-2">BPI</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="BDO">
+                                    <label id="card-bdo" value="bdo" class="form-check-label col-2">BDO</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 container form-group row justify-content-center">
+                            <label for="accnumber" class="col-form-label col-12 col-lg-3 text-right">Account#</label>
+                            <div class="col-12 col-lg-7">
+                                <input type="number" class="form-control" id="accNumber" #acc="ngModel" [(ngModel)]="usersServices.selectedUser.accnumber"
+                                    [class.has-error]="acc.dirty && acc.invalid" placeholder="Enter Account Number" required>
+                            </div>
+                        </div>
+                        <div class="col-12 container form-group row justify-content-center">
+                            <label for="expiration" class="col-form-label col-12 col-lg-3 text-right">Expiration</label>
+                            <div class="col-12 col-lg-7">
+                                <input type="month" class="form-control" id="expiration" #exp="ngModel" [(ngModel)]="usersServices.selectedUser.expiration"
+                                    [class.has-error]="exp.dirty && exp.invalid" placeholder="MMMM/YY" required>
+                            </div>
+                        </div>
+                        <div class="col-12 container form-group row justify-content-center">
+                            <label for="code" class="col-form-label col-12 col-lg-3 text-right">Code</label>
+                            <div class="col-12 col-lg-7">
+                                <input type="number" class="form-control" id="code" #code="ngModel" [(ngModel)]="usersServices.selectedUser.code"
+                                    [class.has-error]="code.dirty && code.invalid" placeholder="Enter Code" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-11 text-right">
+                    <hr>
+                    <button type="submit" class="btn btn-primary col-2" id="sign-in" [disabled]="!f.valid">Sign in!</button>
+                </div>
+            </form> -->
+    <!-- </div>
+    </div> -->
+</div>
+
+<br/><br/>
+<div class="container text-center">
+    <a id="anchor" (click)="toLoginPage()">Already have an account?</a>
+    <br/>
+    <!-- <a routerLink="">Go back to home</a> -->
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+    <br/><br/>
+    <h3 id="schedule" class="highlight">Schedule</h3>
+    <hr>
+    <h5 class="highlight">What is the schedule about?</h5>
+    <p>Free tutorials will be conducted in these places below. Note that <span class="highlight">95% of the sales </span>will
+        be given to charity.</p>
+    <table class="table table-responsive w-100 d-block d-md-table">
+        <thead>
+            <tr class="table-header">
+                <th scope="col" class="no-highlight" *ngFor="let item of tableHeaders">
+                    <h5>{{ item }}</h5>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let value of tableValues">
+                <td>{{ value.city }}</td>
+                <td>{{ value.date | date: 'fullDate'}}</td>
+                <td>{{ value.location }}</td>
+                <td>{{ value.time }}</td>
+                <td class="highlight">{{ value.topic }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

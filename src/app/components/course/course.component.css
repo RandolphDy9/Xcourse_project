@@ -1,0 +1,60 @@
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    /* height: 30%; */
+    object-fit: cover;
+}
+
+.col-md {
+    padding: 20px;
+}
+
+.jumbotron {
+    border-radius: 0;
+}
+
+#jumbo-back {
+    padding: 0;
+    position: relative;
+    margin-bottom: 8rem;
+    background: linear-gradient(#eb607c, #eb4768e0);
+}
+
+#jumbo-heading {
+    padding: 3rem 0;
+    position: relative;
+    top: 6rem;
+    background-color: rgb(240, 231, 231);
+}
+
+#searchBox{
+    margin: 30px auto;
+}
+
+#searchIcon {
+    color: white;
+    background-color: red;
+}
+
+.add-cursor {
+    cursor: pointer;
+}
+
+#cardPadding {
+    padding: 5%;
+}
+
+.courseCard {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.courseCard > * {
+    flex: 1;
+    flex-basis: 100%;
+}
+
+.courseCard .btn {
+    align-self: flex-end;
+}

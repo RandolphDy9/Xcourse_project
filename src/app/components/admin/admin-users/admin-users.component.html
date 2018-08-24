@@ -1,0 +1,45 @@
+<div class="container border">
+    <div class="col-12">
+        <h4 class="highlight">Users List</h4>
+        <table class="table table-responsive w-100 d-block d-md-table">
+            <thead>
+                <tr class="table-header">
+                    <th>Full name</th>
+                    <th>Birthday</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Account #</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{ user.fullname }}</td>
+                    <td>{{ user.birthdate }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.password }}</td>
+                    <td>{{ user.accnum }}</td>
+                    <td><a (click)="id = user.$key" data-toggle="modal" data-target="#confirmation2"><i class="far fa-trash-alt"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="confirmation2" tabindex="-1" role="dialog" aria-labelledby="modalLabel2" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="modalLabel2">Are you permanently deleting this user?</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="onRemove(id)" data-dismiss="modal">Delete User</button>
+            </div>
+        </div>
+    </div>
+</div>

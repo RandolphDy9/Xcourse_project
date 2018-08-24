@@ -1,41 +1,24 @@
-import { MbscModule } from '@mobiscroll/angular';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-import { AppComponent } from './app.component';
-import { TutorComponent } from './tutor/tutor.component';
-import { InfoComponent } from './home/info/info.component';
-import { CourseComponent } from './course/course.component';
-import { ScheduleComponent } from './home/schedule/schedule.component';
-import { AppRoutingModule } from './app-routing.module';
-import { RegistrationComponent } from './auth/registration/registration.component';
-import { HomeComponent } from './home/home.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { LoginComponent } from './auth/login/login.component';
-import { HttpClientModule } from '@angular/common/http';
-import { AuthService } from './auth/auth.service';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireModule } from 'angularfire2';
-import { environment } from '../environments/environment';
-
-import { CourseServices } from './shared/courses.service';
-import { AdminComponent } from './admin/admin.component';
-import { AdminCoursesComponent } from './admin/admin-courses/admin-courses.component';
-import { AdminDetailsComponent } from './admin/admin-details/admin-details.component';
-import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
-import { AdminCourseDisplayComponent } from './admin/admin-course-display/admin-course-display.component';
 import * as firebase from "firebase";
-import { CourseInfoComponent } from './course/course-info/course-info.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AdminQuestionsComponent } from './admin/admin-questions/admin-questions.component';
-
-import { RegistrationSuccessComponent } from './auth/registration/registration-success/registration-success.component';
-import { FilterPipe } from './course/filter.pipe';
-import { MyCoursesComponent } from './my-courses/my-courses.component';
+import { NgModule } from '@angular/core';
+import { ToastrModule } from 'ngx-toastr';
+import { AppComponent } from './app.component';
+import { AngularFireModule } from 'angularfire2';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { environment } from '../environments/environment';
+import { HomeModule } from './components/home/home.module';
+import { AuthModule } from './components/auth/auth.module';
+import { AuthService } from './core/services/auth.service';
+import { AdminModule } from './components/admin/admin.module';
+import { CourseModule } from './components/course/course.module';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { TutorComponent } from './components/tutor/tutor.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MyCoursesComponent } from './components/my-courses/my-courses.component';
+import { NavigationComponent } from './shared/components/navigation/navigation.component';
+import { PageNotFoundComponent } from './shared/components/error-pages/page-not-found/page-not-found.component';
 
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -43,39 +26,25 @@ firebase.initializeApp(environment.firebaseConfig);
   declarations: [
     AppComponent,
     TutorComponent,
-    InfoComponent,
-    CourseComponent,
-    ScheduleComponent,
-    RegistrationComponent,
-    HomeComponent,
     NavigationComponent,
-    LoginComponent,
-    AdminComponent,
-    AdminCoursesComponent,
-    AdminDetailsComponent,
-    AdminUsersComponent,
-    AdminCourseDisplayComponent,
-    CourseInfoComponent,
     PageNotFoundComponent,
-    AdminQuestionsComponent,
-    RegistrationSuccessComponent,
-    FilterPipe,
     MyCoursesComponent
   ],
   imports: [ 
-    MbscModule, 
     NgbModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    AdminModule,
+    AuthModule,
+    CourseModule,
+    HomeModule
   ],
-  providers: [AuthService, CourseServices],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

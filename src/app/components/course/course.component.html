@@ -1,0 +1,59 @@
+<div class="jumbotron" id="jumbo-back">
+    <div class="jumbotron border shadow container" id="jumbo-heading">
+        <h1 class="text-center highlight">{{ message }}</h1>
+        <p class="text-center lead">Courses are available from <span class="highlight">{{ startDate | date:fullDate }}</span>
+            to
+            <span class="highlight">{{ endDate | date:fullDate }}</span>
+        </p>
+    </div>
+</div>
+
+<div id="searchBox" class="container">
+    <div class="col-8">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="searchIcon">
+                    <i class="fas fa-search"></i>
+                </span>
+            </div>
+            <input type="text" [(ngModel)]="textInput">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h3 id="courses" class="highlight">Courses</h3>
+    <div class="container row">
+        <div class="d-flex col-sm-6 col-md-4 col-xl-3 border" *ngFor="let course of courses | filterCourses: textInput">
+            <div class="courseCard container" id="cardPadding">
+                <img class="card-img-top img-fluid" src="{{ course.image }}" alt="Card image cap">
+                <div class="courseCard card-body text-right">
+                    <h4 class="card-title highlight add-cursor">{{ course.title }}</h4>
+                    <strong>Description:</strong>
+                    <p>{{ course.description }}</p>
+                    <p><strong>Creator:</strong> {{ course.creator }}</p>
+                    <p><strong>Price:</strong> $ {{ course.price }}</p>
+                    <button type="button" class="btn btn-primary" (click)="courseKey = course" data-toggle="modal" data-target="#confirmation2">Enroll
+                        Course!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirmation2" tabindex="-1" role="dialog" aria-labelledby="modalLabel2" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="modalLabel2">Enroll this course?</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="onEnroll(courseKey)" data-dismiss="modal">Enroll Course</button>
+            </div>
+        </div>
+    </div>
+</div>

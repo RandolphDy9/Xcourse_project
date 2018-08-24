@@ -1,0 +1,17 @@
+<div class="container">
+  <h4 class="highlight">User Questions</h4>
+  <hr>
+  <div class="card border rounded shadow bg-dark" *ngFor="let ques of questions">
+    <div class="card-header row">
+      <div class="col-4">From: <h4 class="highlight">{{ ques.username }}</h4></div>
+      <div class="col-4">Course: <h4 class="highlight">{{ ques.courseEnrolled }}</h4></div>
+      <div class="col-4">
+          <button class="btn btn-primary float-right">Reply</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ ques.subject }}</h5>
+      <p class="card-text">{{ ques.body }}</p>
+    </div>
+  </div>
+</div>

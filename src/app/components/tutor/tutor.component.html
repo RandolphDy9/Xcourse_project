@@ -1,0 +1,46 @@
+<div class="container">
+    <h1 class="main-heading highlight">Our Leaders</h1>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-fluid" src="../../assets/img/plumber.png" alt="Picture of president">
+            </div>
+            <div class="col-md-8">
+                <h3 class="highlight">Super D. Mario</h3>
+                <p class="text-muted">PRESIDENT</p>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum."</p>
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+
+    <div class="col-12">
+        <div class="row">
+            <div class="col-md-8">
+                <h3 class="text-right highlight">Barry J. Allen</h3>
+                <p class="text-muted text-right">VICE PRESIDENT</p>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum."</p>
+            </div>
+            <div class="col-md-4">
+                <img class="img-fluid" src="../../assets/img/superheroe.png" alt="Picture of president">
+            </div>
+        </div>
+    </div>
+
+    <h1 id="tutors" class="main-heading highlight">Tutors</h1>
+    <div class="container row mx-auto">
+        <div class="tutor col-md-6" *ngFor="let item of tutorObj; let i = index">
+            <img class="tutor-pic" src="{{ item.imagePath }}" alt="Picture of Juan">
+            <h4 class="highlight back-style">{{ item.tutorName }}</h4>
+            <p>{{ item.tutorDescription }}</p>
+        </div>
+    </div>
+</div>
